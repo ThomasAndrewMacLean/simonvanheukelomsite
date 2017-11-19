@@ -22,29 +22,35 @@
 
 </head>
 
-<body>
+<body ng-app="simApp">
+  <nav ng-controller="navController as vm">
+    <div ng-click="vm.goToLink('')">Home</div>
+    <div ng-click="vm.goToLink('Photography')">PHOTO</div>
+
+  </nav>
   <div id="message">
     <h2>Welcome</h2>
-    <h1>Firebase Hosting Setup Complete</h1>
-    <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-    <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-  </div>hallo
-  <img src="./photos/rijeka-nebo1.jpg">test
-  <p id="load">Firebase SDK Loading&hellip;</p>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      try {
-        let app = firebase.app();
-        let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] ===
-          'function');
-        document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-      }
-    });
-  </script>
+
+
+    <ng-view></ng-view>
+
+  </div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+  <script src="./navController.js"></script>
+  <script src="./pages/home/homeController.js"></script>
+  <script src="./pages/photographyController.js"></script>
+
+  <script src="./general.js"></script>
+
+
+
 </body>
 
 </html>
