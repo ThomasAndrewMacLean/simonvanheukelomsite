@@ -23,19 +23,20 @@
 </head>
 
 <body ng-app="simApp">
-  <nav ng-controller="navController as vm">
-    <div ng-click="vm.goToLink('')">Home</div>
-    <div ng-click="vm.goToLink('Photography')">PHOTO</div>
-
+  <nav id="ndav" ng-controller="navController as vm">
+    <div class="nav-link" ng-class="{'activeLink' : !vm.activeLink || vm.activeLink == ''}" ng-click="vm.goToLink('')">Home</div>
+    <div class="nav-link" ng-class="{'activeLink' : vm.activeLink == 'Collage'}" ng-click="vm.goToLink('Collage')">Collage</div>
+    <div class="nav-link" ng-class="{'activeLink' : vm.activeLink == 'Photography'}" ng-click="vm.goToLink('Photography')">Photography</div>
+    <div class="nav-link" ng-class="{'activeLink' : vm.activeLink == 'Contact'}" ng-click="vm.goToLink('Contact')">Contact</div>
   </nav>
-  <div id="message">
-    <h2>Welcome</h2>
 
 
 
-    <ng-view></ng-view>
 
-  </div>
+
+  <ng-view></ng-view>
+
+
 
 
 
@@ -46,6 +47,8 @@
   <script src="./navController.js"></script>
   <script src="./pages/home/homeController.js"></script>
   <script src="./pages/photographyController.js"></script>
+  <script src="./pages/collageController.js"></script>
+  <script src="./pages/contactController.js"></script>
 
   <script src="./general.js"></script>
 

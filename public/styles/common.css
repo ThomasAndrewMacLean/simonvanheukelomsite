@@ -11,3 +11,38 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
+
+nav {
+    background: whitesmoke;
+    border-bottom: 1px solid black;
+    clear: both;
+    overflow: hidden;
+    /* padding: 5px; */
+}
+
+.nav-link {
+    float: left;
+    padding: 10px 10px 5px 10px;
+    cursor: pointer;
+    border-bottom: 5px solid whitesmoke;
+}
+
+.nav-link:hover {
+    background: goldenrod;
+    border-bottom: 5px solid goldenrod;
+}
+
+.activeLink {
+    background: goldenrod;
+    border-bottom: 5px solid brown;
+}
+
+.activeLink:hover {
+    border-bottom: 5px solid brown;
+}
+
+.main-content {
+    height: 100vh;
+    width: 100 vw;
+    background: greenyellow;
+}
