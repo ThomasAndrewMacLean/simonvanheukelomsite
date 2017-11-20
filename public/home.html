@@ -1,16 +1,25 @@
 <div class="main-content">
-    <h1>Simon</h1>
 
-    <p class="about-p">
-        Simon Vanheukelom (°1987) is a Gent based mixed media artist working in the fields of collage, installation, scenography
-        / performance and photography.
-    </p>
-    <p class="about-p">
-        The
-        <i>‘image’</i> is my material and becomes in all its simplicity or complexity the medium. Often I search for the performative
-        quality in my work. This I try to achieve by showing the act of manipulation within the image revealing the mechanism
-        of the work. After an intuitive creation process, my work reveals itself to me once it is finished. Just like it
-        does tell stories to a viewer, also its symbols unveil to me.
-    </p>
+    <div class="about-wrapper">
 
+        <p class="about-p">
+            Simon Vanheukelom (°1987) is a Gent based mixed media artist working in the fields of collage, installation, scenography
+            / performance and photography.
+        </p>
+        <p class="about-p">
+            The
+            <i>‘image’</i> is my material and becomes in all its simplicity or complexity the medium. Often I search for the
+            performative quality in my work. This I try to achieve by showing the act of manipulation within the image revealing
+            the mechanism of the work. After an intuitive creation process, my work reveals itself to me once it is finished.
+            Just like it does tell stories to a viewer, also its symbols unveil to me.
+        </p>
+    </div>
+
+    <button id="togglePlayBtn" class="videobtns" ng-click="vm.togglePlay()">
+        <i class="fa" ng-class="{'fa-pause':vm.play, 'fa-play':!vm.play}"></i>
+    </button>
+    <button id="toggleMuteBtn" class="videobtns" ng-click="vm.toggleMute()">
+        <i class="fa" ng-class="{'fa-volume-up':vm.mute, 'fa-volume-off':!vm.mute}"></i>
+    </button>
+    <video id="videoHome" src="./vid/trim.mp4" playsinline autoplay muted loop></video>
 </div>

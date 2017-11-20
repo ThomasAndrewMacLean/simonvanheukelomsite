@@ -1,8 +1,11 @@
 <div class="main-content">
-    <h1>Collage</h1>
+    <!-- <h1>Collage</h1> -->
 
     <div ng-repeat="col in vm.collages">
-        <img src="./collages/{{col}}" /> </div>
+        <div class="img-container" ng-style="{'padding-bottom' : col.ratio + '%'}">
+            <img src="./collages/{{col.name}}" />
+        </div>
+    </div>
 
 
 </div>
