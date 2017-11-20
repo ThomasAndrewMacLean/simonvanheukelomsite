@@ -10,6 +10,7 @@ h6 {
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
+    color: #333;
 }
 
 nav {
@@ -42,7 +43,55 @@ nav {
 }
 
 .main-content {
-    height: 100vh;
-    width: 100 vw;
-    background: greenyellow;
+    height: calc(100vh - 67px);
+    width: 100vw;
+    /* padding: 15px; */
+    /* background: greenyellow; */
+}
+
+.add-padding {
+    padding: 15px;
+}
+
+h1 {
+    padding: 15px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    border-bottom: 2px dotted saddlebrown;
+    display: inline-block;
+}
+
+.about-p {
+    line-height: 30px;
+    margin-top: 30px;
+    max-width: 750px;
+    padding: 0px 15px
+}
+
+#share {
+    background: whitesmoke;
+    color: #999;
+    padding: 10px;
+    font-size: 30px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    position: fixed;
+    top: 40%;
+    right: -5px;
+}
+
+#share>i {
+    cursor: pointer;
+    clear: both;
+    display: flex;
+}
+
+#share>i:hover {
+    color: #666
+}
+
+img {
+    /* margin-left: -15px; */
+    width: 100%;
+    height: auto;
 }

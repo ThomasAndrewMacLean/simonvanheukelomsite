@@ -16,7 +16,9 @@
   <!-- initialize the SDK after all desired features are loaded -->
   <script defer src="/__/firebase/init.js"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Raleway:400,600" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <script src="https://use.fontawesome.com/83cc776bf6.js"></script>
   <link href="./styles/reset.css" rel="stylesheet">
   <link href="./styles/common.css" rel="stylesheet">
 
@@ -30,15 +32,17 @@
     <div class="nav-link" ng-class="{'activeLink' : vm.activeLink == 'Contact'}" ng-click="vm.goToLink('Contact')">Contact</div>
   </nav>
 
-
-
-
-
   <ng-view></ng-view>
 
 
 
+  <div id="share">
+    <i class="fa fa-share-alt"></i>
+    <i class="fa fa-envelope"></i>
+    <i class="fa fa-whatsapp"></i>
+    <i class="fa fa-facebook-square"></i>
 
+  </div>
 
 
 
